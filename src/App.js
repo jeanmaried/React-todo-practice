@@ -134,17 +134,21 @@ class ToDo extends Component{
 export default ToDo;
 
 Todo.proptype={
-  number: PropTypes.shape({
+  item: PropTypes.shape({
     id: PropTypes.number.isRequired,
     title: PropTypes.string.isRequired,
     complete: PropTypes.bool.isRequired
-  })
+  }),
+  toggleComplete: PropTypes.func.isRequired,
+  removeToDo: PropTypes.func.isRequired
 };
 
 ClearButton.proptype={
-  removeCompleted: PropTypes.string.isRequired
+  removeCompleted: PropTypes.func.isRequired
 };
 
 ToDoCount.proptype={
   ToDoCount: PropTypes.number.isRequired
 };
+
+
